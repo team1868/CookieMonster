@@ -5,7 +5,7 @@ const { Dataset } = require("./DataTransformer");
 const chalk = require("chalk");
 
 //enable debug logs
-const debug = false
+const debug = true
 
 /* load transformers */
 const transformers = {
@@ -36,8 +36,9 @@ if (debug) console.log("loaded all transformers!");
 
 async function execute(dataset) {
     /* get tmps from database */
+    if (debug) console.log("constructing dataset...")
     dataset = new Dataset((await TeamMatchPerformance.find()).map((o) => o.toObject()));
-    
+    if (debug) console.log("dataset constructed")
     for (let tfConfig of pipelineConfig) {
         if (debug) console.log(`running ${tfConfig.name} - ${JSON.stringify(tfConfig.options)}`)
         dataset = transformers[tfConfig.type][tfConfig.name].execute(dataset, tfConfig.outputPath, tfConfig.options);
