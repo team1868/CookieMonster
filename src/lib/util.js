@@ -23,7 +23,7 @@ function getPath(obj,path,ifnone=ThrowError) {
 /**
  * set a value at a keypath within an object
  * @param {Object} obj the object that will be modified
- * @param {String} path the keypath where you wish to set the value (eg. "team.counts.lowerHub"). If this is not fully defined, it will be created
+ * @param {String} path the keypath where you wish to set the value (eg. "team.counts.level1"). If this is not fully defined, it will be created
  * @param {Object} value the value to set at the path 
  * @returns the value
  */

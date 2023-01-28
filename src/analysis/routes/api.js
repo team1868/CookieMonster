@@ -10,7 +10,7 @@ router.get("/dataset", async (req, res) => {
 })
 
 if (!config.secrets.TBA_API_KEY) {
-    console.error(chalk.whiteBright.bgRed.bold("TBA_API_KEY not found in config.json file! SPOT will not properly function without this."))
+    console.error(chalk.whiteBright.bgRed.bold("TBA_API_KEY not found in config.json file! CookieMonster will not properly function without this."))
 }
 
 router.get("/teams", async (req, res) => {
@@ -40,7 +40,7 @@ router.get("/csv", async (req,res) => {
                 ...Object.entries(team.averages).map(([i,x]) => i+" Average"), //all averages
                 ...Object.entries(team.averageScores).map(([i,x]) => i+" Average Score"), //average scores
                 "Time Per Ball",
-                "Possible Climbs",
+                "Possible Charge",
                 "Accuracy", //accuracy,
 				...Object.entries(team.averageScores).map(([i,x]) => i+"Average"), //all averages
             ])
@@ -50,7 +50,7 @@ router.get("/csv", async (req,res) => {
             ...Object.entries(team.averages).map(([i,x]) => x), //all averages
             ...Object.entries(team.averageScores).map(([i,x]) => x), //all averages
             team.timePerBall,
-            team.possibleClimbs,
+            team.possiblecharges,
             team.accuracy, //accuracy
 			...Object.entries(team.averageScores).map(([i,x]) => x), //all averages
         ])

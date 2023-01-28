@@ -3,7 +3,7 @@ const {DataTransformer} = require("../DataTransformer");
 
 module.exports = {
     /**
-     * map a key at path (eg. "climb1") to a value (eg. 4)
+     * map a key at path (eg. "charge1") to a value (eg. 4)
      * @type {DataTransformer}
      * @param options.path {String} the path to which the key is found
      * @param options.map {Object} an Object that contains the keys and values. If the path to the 

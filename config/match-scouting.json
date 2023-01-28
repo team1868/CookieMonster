@@ -1,12 +1,16 @@
 {
     "timing": {
-        "totalTime": 150000,
+        "totalTime": 153000,
         "timeTransitions": {
-            "149990": {
+            "152990": {
                 "layer": 1,
                 "displayText": "Auto"
             },
-            "131000": {
+            "138000": {
+                "layer": 2,
+                "displayText": "Do not touch"
+            },
+            "135000": {
                 "layer": 3,
                 "displayText": "Teleop"
             }
@@ -36,8 +40,8 @@
                     "executables": []
                 },
                 {
-                    "id": "leaveTarmac",
-                    "displayText": "Leave Tarmac Zone",
+                    "id": "leaveCommunity",
+                    "displayText": "Leave Community Zone",
                     "gridArea": ["3", "2", "4", "5"],
                     "class": "gray largeAction",
                     "type": "action",
@@ -52,25 +56,33 @@
                     "executables": []
                 },
                 {
-                    "id": "groundPickup",
-                    "displayText": "Ground Pickup",
+                    "id": "groundIntake",
+                    "displayText": "Ground Intake",
                     "gridArea": ["5", "1", "6", "2"],
                     "class": "navy",
                     "type": "action",
                     "executables": [{"type": "position", "args":[]}]
                 },
                 {
-                    "id": "upperHub",
-                    "displayText": "Upper Hub",
+                    "id": "level0",
+                    "displayText": "Level 0",
                     "gridArea": ["4", "5", "5", "6"],
                     "class": "orange",
                     "type": "action",
                     "executables": [{"type": "position", "args":[]}]
                 },
                 {
-                    "id": "lowerHub",
-                    "displayText": "Lower Hub",
+                    "id": "level1",
+                    "displayText": "Level 1",
                     "gridArea": ["5", "5", "6", "6"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "position", "args":[]}]
+                },
+                {
+                    "id": "level2",
+                    "displayText": "Level 2",
+                    "gridArea": ["3", "5", "4", "6"],
                     "class": "orange",
                     "type": "action",
                     "executables": [{"type": "position", "args":[]}]
@@ -78,6 +90,88 @@
                 {
                     "id": "miss",
                     "displayText": "Miss",
+                    "gridArea": ["5", "4", "6", "5"],
+                    "class": "red",
+                    "type": "action",
+                    "executables": [{"type": "position", "args":[]}]
+                },
+                {
+                    "id": "drop",
+                    "displayText": "Drop",
+                    "gridArea": ["5", "6", "6", "5"],
+                    "class": "red",
+                    "type": "action",
+                    "executables": [{"type": "position", "args":[]}]
+                }
+            ],
+            [
+                {
+                    "id": "startGame",
+                    "displayText": "Start",
+                    "gridArea": ["1", "2", "2", "5"],
+                    "class": "gray",
+                    "type": "match-control",
+                    "executables": []
+                },
+                {
+                    "id": "undo",
+                    "displayText": "Undo",
+                    "gridArea": ["5", "2", "6", "3"],
+                    "class": "green",
+                    "type": "undo",
+                    "executables": []
+                },
+                {
+                    "id": "HPIntake",
+                    "displayText": "HP Platform Intake",
+                    "gridArea": ["4", "1", "5", "2"],
+                    "class": "navy",
+                    "type": "action",
+                    "executables": [{"type": "constantPosition", "args":[{"x":10,"y":85}]}]
+                },
+                {
+                    "id": "groundIntake",
+                    "displayText": "Ground Intake",
+                    "gridArea": ["5", "1", "6", "2"],
+                    "class": "navy",
+                    "type": "action",
+                    "executables": [{"type": "position", "args":[]}]
+                },
+                {
+                    "id": "level1",
+                    "displayText": "Level 1",
+                    "gridArea": ["4", "5", "5", "6"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "position", "args":[]}]
+                },
+                {
+                    "id": "level2",
+                    "displayText": "Level 2",
+                    "gridArea": ["5", "5", "6", "6"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "position", "args":[]}]
+                },
+                {
+                    "id": "level0",
+                    "displayText": "Level 0",
+                    "gridArea": ["3", "5", "4", "6"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "position", "args":[]}]
+                },
+                {
+                    "id": "miss",
+                    "displayText": "Miss",
+                    "gridArea": ["5", "4", "6", "5"],
+                    "class": "red",
+                    "type": "action",
+                    "executables": [{"type": "position", "args":[]}]
+                },
+                {
+                    "id": "drop",
+                    "displayText": "Drop",
                     "gridArea": ["5", "4", "6", "5"],
                     "class": "red",
                     "type": "action",
@@ -102,33 +196,41 @@
                     "executables": []
                 },
                 {
-                    "id": "terminalPickup",
-                    "displayText": "Terminal Pickup",
+                    "id": "HPIntake",
+                    "displayText": "HP Platform Intake",
                     "gridArea": ["4", "1", "5", "2"],
                     "class": "navy",
                     "type": "action",
                     "executables": [{"type": "constantPosition", "args":[{"x":10,"y":85}]}]
                 },
                 {
-                    "id": "groundPickup",
-                    "displayText": "Ground Pickup",
+                    "id": "groundIntake",
+                    "displayText": "Ground Intake",
                     "gridArea": ["5", "1", "6", "2"],
                     "class": "navy",
                     "type": "action",
                     "executables": [{"type": "position", "args":[]}]
                 },
                 {
-                    "id": "upperHub",
-                    "displayText": "Upper Hub",
+                    "id": "level1",
+                    "displayText": "Level 1",
                     "gridArea": ["4", "5", "5", "6"],
                     "class": "orange",
                     "type": "action",
                     "executables": [{"type": "position", "args":[]}]
                 },
                 {
-                    "id": "lowerHub",
-                    "displayText": "Lower Hub",
+                    "id": "level2",
+                    "displayText": "Level 2",
                     "gridArea": ["5", "5", "6", "6"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "position", "args":[]}]
+                },
+                {
+                    "id": "level0",
+                    "displayText": "Level 0",
+                    "gridArea": ["3", "5", "4", "6"],
                     "class": "orange",
                     "type": "action",
                     "executables": [{"type": "position", "args":[]}]
@@ -140,68 +242,26 @@
                     "class": "red",
                     "type": "action",
                     "executables": [{"type": "position", "args":[]}]
-                }
-            ],
-            [
+                },
                 {
-                    "id": "startGame",
-                    "displayText": "Start",
-                    "gridArea": ["1", "2", "2", "5"],
+                    "id": "drop",
+                    "displayText": "Drop",
+                    "gridArea": ["5", "4", "6", "5"],
+                    "class": "red",
+                    "type": "action",
+                    "executables": [{"type": "position", "args":[]}]
+                },
+                {
+                    "id": "engageStation",
+                    "displayText": "Engage Charging Station",
+                    "gridArea": ["3", "2", "4", "5"],
                     "class": "gray",
-                    "type": "match-control",
-                    "executables": []
-                },
-                {
-                    "id": "undo",
-                    "displayText": "Undo",
-                    "gridArea": ["5", "2", "6", "3"],
-                    "class": "green",
-                    "type": "undo",
-                    "executables": []
-                },
-                {
-                    "id": "terminalPickup",
-                    "displayText": "Terminal Pickup",
-                    "gridArea": ["4", "1", "5", "2"],
-                    "class": "navy",
                     "type": "action",
-                    "executables": [{"type": "constantPosition", "args":[{"x":10,"y":85}]}]
+                    "executables": [{"type": "layer", "args":[3,4]}]
                 },
                 {
-                    "id": "groundPickup",
-                    "displayText": "Ground Pickup",
-                    "gridArea": ["5", "1", "6", "2"],
-                    "class": "navy",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "upperHub",
-                    "displayText": "Upper Hub",
-                    "gridArea": ["4", "5", "5", "6"],
-                    "class": "orange",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "lowerHub",
-                    "displayText": "Lower Hub",
-                    "gridArea": ["5", "5", "6", "6"],
-                    "class": "orange",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "miss",
-                    "displayText": "Miss",
-                    "gridArea": ["5", "4", "6", "5"],
-                    "class": "red",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "startClimb",
-                    "displayText": "Start Climb",
+                    "id": "dockStation",
+                    "displayText": "Charging Station",
                     "gridArea": ["3", "2", "4", "5"],
                     "class": "gray",
                     "type": "action",
@@ -226,39 +286,23 @@
                     "executables": []
                 },
                 {
-                    "id": "climb1",
-                    "displayText": "1",
+                    "id": "charge1",
+                    "displayText": "Docked",
                     "gridArea": ["3", "1", "4", "2"],
                     "class": "pink",
                     "type": "action",
-                    "executables": [{"type":"climbHighlight","args":[]}]
+                    "executables": [{"type":"chargeHighlight","args":[]}]
                 },
                 {
-                    "id": "climb2",
-                    "displayText": "2",
+                    "id": "charge2",
+                    "displayText": "Engaged",
                     "gridArea": ["3", "2", "4", "3"],
                     "class": "pink",
                     "type": "action",
-                    "executables": [{"type":"climbHighlight","args":[]}]
+                    "executables": [{"type":"chargeHighlight","args":[]}]
                 },
                 {
-                    "id": "climb3",
-                    "displayText": "3",
-                    "gridArea": ["3", "3", "4", "4"],
-                    "class": "pink",
-                    "type": "action",
-                    "executables": [{"type":"climbHighlight","args":[]}]
-                },
-                {
-                    "id": "climb4",
-                    "displayText": "4",
-                    "gridArea": ["3", "4", "4", "5"],
-                    "class": "pink",
-                    "type": "action",
-                    "executables": [{"type":"climbHighlight","args":[]}]
-                },
-                {
-                    "id": "climbF",
+                    "id": "chargeF",
                     "displayText": "Fall",
                     "gridArea": ["3", "5", "4", "6"],
                     "class": "red",

@@ -3,7 +3,7 @@ const chalk = require("chalk");
 const config = require("../../config/config.json");
 
 mongoose.connect(config.secrets.DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true}).catch(e => {
-    console.error(e,chalk.whiteBright.bgRed.bold(`\nError connecting to MongoDB! This could be because DATABASE_URL is incorrect in your config.json file. SPOT will not properly function without a database.`))
+    console.error(e,chalk.whiteBright.bgRed.bold(`\nError connecting to MongoDB! This could be because DATABASE_URL is incorrect in your config.json file. CookieMonster will not properly function without a database.`))
 })
 
 
@@ -32,11 +32,11 @@ tmp = {
             "temp": true
         },
         {
-            "id": "startClimb",
+            "id": "startCharge",
             "ts": 0
         },
         {
-            "id": "climbF",
+            "id": "clF",
             "ts": 0
         }
     ]

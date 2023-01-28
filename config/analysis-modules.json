@@ -10,12 +10,13 @@
             "actionGroups": [
                 {
                     "name": "Shots",
-                    "actions": ["upperHub", "lowerHub", "miss"]
+                    "actions": ["level2", "level1", "miss"]
                 }
             ],
             "actionLabels": {
-                "upperHub": "Upper",
-                "lowerHub": "Lower",
+                "level2": "Level 2",
+                "level1": "Level 1",
+                "level0": "Level 0",
                 "miss": "Miss"
             },
             "imgPath": "img/field.svg"
@@ -32,12 +33,12 @@
             "actionGroups": [
                 {
                     "name": "Pickups",
-                    "actions": ["groundPickup", "terminalPickup"]
+                    "actions": ["groundIntake", "HPIntake"]
                 }
             ],
             "actionLabels": {
-                "groundPickup": "Ground",
-                "terminalPickup": "Terminal"
+                "groundIntake": "Ground",
+                "HPIntake": "HP"
             },
             "imgPath": "img/field.svg"
         }
@@ -66,7 +67,7 @@
             "list": [
                 {
                     "name": "Initiation Cross",
-                    "path": "averages.tarmacCrossTime",
+                    "path": "averages.CommunityZoneTime",
                     "multiplier": -0.001,
                     "addend": 150,
                     "decimals": 2,
@@ -75,8 +76,8 @@
                     "unit": "s in"
                 },
                 {
-                    "name": "Climb Start Time",
-                    "path": "averages.startClimbTime",
+                    "name": "Charge Start Time",
+                    "path": "averages.startEndgameTime",
                     "multiplier": 0.001,
                     "decimals": 2,
 					"hideIfValue": 0,
@@ -84,8 +85,8 @@
                     "unit": "s to end"
                 },
                 {
-                    "name": "Climb End Time",
-                    "path": "averages.endClimbTime",
+                    "name": "Charge End Time",
+                    "path": "averages.endChargeTime",
                     "multiplier": 0.001,
                     "decimals": 2,
 					"hideIfValue": 0,
@@ -93,8 +94,8 @@
                     "unit": "s to end"
                 },
 				{
-                    "name": "Climb Duration",
-                    "path": "averages.climbDuration",
+                    "name": "Charge Duration",
+                    "path": "averages.ChargeDuration",
                     "multiplier": 0.001,
                     "decimals": 2,
 					"hideIfValue": 0,
@@ -102,8 +103,8 @@
                     "unit": "s"
                 },
                 {
-                    "name": "Time Per Ball",
-                    "path": "timePerBall",
+                    "name": "Time Per Gamepiece",
+                    "path": "timePerGamepiece",
                     "multiplier": 0.001,
                     "decimals": 2,
 					"hideIfValue": 0,
@@ -125,7 +126,7 @@
 					"sort": 1
                 },
                 {
-                    "name": "Average Climb Points",
+                    "name": "Average Endgame Points",
                     "path": "averageScores.endgame",
 					"decimals": 2,
 					"sort": 1
@@ -137,14 +138,20 @@
 					"sort": 1
                 },
                 {
-                    "name": "Average Upper Hub Shots",
-                    "path": "averages.upperHub",
+                    "name": "Average Level 2 Scored",
+                    "path": "averages.level2",
 					"decimals": 2,
 					"sort": 1
                 },
                 {
-                    "name": "Average Lower Hub Shots",
-                    "path": "averages.lowerHub",
+                    "name": "Average Level 1 Scored",
+                    "path": "averages.level1",
+					"decimals": 2,
+					"sort": 1
+                },
+                {
+                    "name": "Average Level 0 Scored",
+                    "path": "averages.level0",
 					"decimals": 2,
 					"sort": 1
                 },
@@ -161,32 +168,32 @@
         "view": "team",
         "module": "Pie",
         "position": "main",
-        "name": "Climb Distribution",
+        "name": "Endgame Distribution",
         "options": {
             "slices": [
                 {
-                    "name": "No Climb",
-                    "path": "climbLevels.noClimb"
+                    "name": "No Station",
+                    "path": "stationLevels.noStation"
                 },
                 {
                     "name": "Fall",
-                    "path": "climbLevels.climbF"
+                    "path": "stationLevels.stationF"
                 },
                 {
-                    "name": "Low Rung",
-                    "path": "climbLevels.climb1"
+                    "name": "1",
+                    "path": "stationLevels.station1"
                 },
                 {
-                    "name": "Mid Rung",
-                    "path": "climbLevels.climb2"
+                    "name": "2",
+                    "path": "stationLevels.station2"
                 },
                 {
-                    "name": "High Rung",
-                    "path": "climbLevels.climb3"
+                    "name": "3",
+                    "path": "stationLevels.station3"
                 },
                 {
-                    "name": "Traversal Rung",
-                    "path": "climbLevels.climb4"
+                    "name": "Engaged",
+                    "path": "stationLevels.station4"
                 }
             ]
         }
@@ -199,12 +206,16 @@
         "options": {
             "slices": [
                 {
-                    "name": "Upper Hub",
-                    "path": "counts.upperHub"
+                    "name": "Level 2",
+                    "path": "counts.level2"
                 },
                 {
-                    "name": "Lower Hub",
-                    "path": "counts.lowerHub"
+                    "name": "Level 1",
+                    "path": "counts.level1"
+                },
+                {
+                    "name": "Level 0",
+                    "path": "counts.level1"
                 },
                 {
                     "name": "Miss",
@@ -222,11 +233,11 @@
             "slices": [
                 {
                     "name": "Ground",
-                    "path": "counts.groundPickup"
+                    "path": "counts.groundIntake"
                 },
                 {
-                    "name": "Terminal",
-                    "path": "counts.terminalPickup"
+                    "name": "HP",
+                    "path": "counts.HPIntake"
                 }
             ]
         }
@@ -257,7 +268,7 @@
 	{
 		"view": "match",
 		"module": "ColumnDisplay",
-		"name": "Climb Points",
+		"name": "Endgame Points",
 		"position": "main",
 		"options": {
 			"path": "averageScores.endgame",
@@ -268,20 +279,20 @@
 	{
 		"view": "match",
 		"module": "ColumnDisplay",
-		"name": "Possible Climbs",
+		"name": "Possible Endgames",
 		"position": "main",
 		"options": {
 			"string": true,
-			"path": "possibleClimbs"
+			"path": "possibleEndgames"
 		}
 	},
 	{
 		"view": "match",
 		"module": "ColumnDisplay",
-		"name": "Climb Duration",
+		"name": "Endgame Duration",
 		"position": "main",
 		"options": {
-			"path": "averages.climbDuration",
+			"path": "averages.endgameDuration",
 			"multiplier": 0.001,
 			"decimals": 2,
 			"hideIfValue": 0,
@@ -303,10 +314,10 @@
 	{
 		"view": "match",
 		"module": "ColumnDisplay",
-		"name": "Time Per Ball",
+		"name": "Time Per Gamepiece",
 		"position": "main",
 		"options": {
-			"path": "timePerBall",
+			"path": "timePerGamepiece",
 			"multiplier": 0.001,
 			"decimals": 2,
 			"hideIfValue": 0,
@@ -348,12 +359,13 @@
             "actionGroups": [
                 {
                     "name": "Shots",
-                    "actions": ["upperHub", "lowerHub", "miss"]
+                    "actions": ["level2", "level1","level0", "miss"]
                 }
             ],
             "actionLabels": {
-                "upperHub": "Upper",
-                "lowerHub": "Lower",
+                "level2": "level2",
+                "level1": "level1",
+                "level0": "level0",
                 "miss": "Miss"
             },
             "imgPath": "img/field.svg"
@@ -370,12 +382,12 @@
             "actionGroups": [
                 {
                     "name": "Pickups",
-                    "actions": ["groundPickup", "terminalPickup"]
+                    "actions": ["groundIntake", "HPIntake"]
                 }
             ],
             "actionLabels": {
-                "groundPickup": "Ground",
-                "terminalPickup": "Terminal"
+                "groundIntake": "Ground",
+                "HPIntake": "HP"
             },
             "imgPath": "img/field.svg"
         }
@@ -400,7 +412,7 @@
                     "aggrMethod": "sum"
                 },
                 {
-                    "name": "Expected Climb Points",
+                    "name": "Expected Endgame Points",
                     "path": "averageScores.endgame",
 					"decimals": 2,
                     "aggrMethod": "sum"
@@ -422,12 +434,16 @@
         "options": {
             "slices": [
                 {
-                    "name": "Upper Hub",
-                    "path": "averages.upperHub"
+                    "name": "Level 2",
+                    "path": "averages.level2"
                 },
                 {
-                    "name": "Lower Hub",
-                    "path": "averages.lowerHub"
+                    "name": "Level 1",
+                    "path": "averages.level1"
+                },
+                {
+                    "name": "Level 0",
+                    "path": "averages.level0"
                 },
                 {
                     "name": "Miss",

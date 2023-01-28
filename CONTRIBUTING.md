@@ -27,7 +27,7 @@ We'd love to see your analysis transformers and modules added to SPOT so that it
 * **Stable** - Transformers and modules should not error if they are passed in the right data. Make sure to handle divide-by-zero errors and add default values, for example, to handle scenarios when  data is missing.
 * **Configurable** - Transformers and modules should work with any input data as long as it's in the right format. They should also be highly configurable for a variety of use cases. For example, the `Stats` module can display stats with an optional `multiplier` and `addend` as well as a data `label` for each statistic.
 * **Not too configurable** - Make sure to avoid putting too many options for your transformer or module. If you need to include a lot, make sure that they can be omitted from the configuration JSON and use default values instead, like the `Stats` module.
-* **General Naming** - Try to avoid naming the transformer/module or internal variables after anything related to the game or any game terminology (ex. shot, score, climb). We are working with raw data, not game data. Words to use are "action, array, count" etc.
+* **General Naming** - Try to avoid naming the transformer/module or internal variables after anything related to the game or any game terminology (ex. shot, score, charge). We are working with raw data, not game data. Words to use are "action, array, count" etc.
     * Instead of `ShotMap`, try `ActionMap`
     * Instead of `PickupList`, try `ActionList` (also goes along with **Configurable**)
 * **Transformer Types**: Transformers should have either a `tmp` or `team` type, or both. Make sure your `team` type isn't just a version of another existing transformer like `average`.
