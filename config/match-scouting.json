@@ -42,7 +42,7 @@
                 {
                     "id": "leaveCommunity",
                     "displayText": "Leave Community Zone",
-                    "gridArea": ["3", "2", "4", "5"],
+                    "gridArea": ["3", "2", "2", "5"],
                     "class": "gray largeAction",
                     "type": "action",
                     "executables": [{"type": "hide", "args": []}]
@@ -56,208 +56,88 @@
                     "executables": []
                 },
                 {
-                    "id": "groundIntake",
-                    "displayText": "Ground Intake",
+                    "id": "intakeCone",
+                    "displayText": "Intake Cone",
                     "gridArea": ["5", "1", "6", "2"],
                     "class": "navy",
                     "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
+                    "executables": [{"type": "layer", "args":[1,5]}]
                 },
                 {
-                    "id": "level0",
-                    "displayText": "Level 0",
-                    "gridArea": ["4", "5", "5", "6"],
-                    "class": "orange",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "level1",
-                    "displayText": "Level 1",
-                    "gridArea": ["5", "5", "6", "6"],
-                    "class": "orange",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "level2",
-                    "displayText": "Level 2",
-                    "gridArea": ["3", "5", "4", "6"],
-                    "class": "orange",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "miss",
-                    "displayText": "Miss",
-                    "gridArea": ["5", "4", "6", "5"],
-                    "class": "red",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "drop",
-                    "displayText": "Drop",
-                    "gridArea": ["5", "6", "6", "5"],
-                    "class": "red",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                }
-            ],
-            [
-                {
-                    "id": "startGame",
-                    "displayText": "Start",
-                    "gridArea": ["1", "2", "2", "5"],
-                    "class": "gray",
-                    "type": "match-control",
-                    "executables": []
-                },
-                {
-                    "id": "undo",
-                    "displayText": "Undo",
-                    "gridArea": ["5", "2", "6", "3"],
-                    "class": "green",
-                    "type": "undo",
-                    "executables": []
-                },
-                {
-                    "id": "HPIntake",
-                    "displayText": "HP Platform Intake",
-                    "gridArea": ["4", "1", "5", "2"],
+                    "id": "intakeCube",
+                    "displayText": "Intake Cube",
+                    "gridArea": ["4", "1", "4", "2"],
                     "class": "navy",
                     "type": "action",
-                    "executables": [{"type": "constantPosition", "args":[{"x":10,"y":85}]}]
+                    "executables": [{"type": "layer", "args":[1,5]}]
                 },
                 {
-                    "id": "groundIntake",
-                    "displayText": "Ground Intake",
-                    "gridArea": ["5", "1", "6", "2"],
-                    "class": "navy",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "level1",
-                    "displayText": "Level 1",
-                    "gridArea": ["4", "5", "5", "6"],
+                    "id": "shootPreload",
+                    "displayText": "Shoot Preload",
+                    "gridArea": ["4", "5", "4", "5"],
                     "class": "orange",
                     "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
+                    "executables": [{"type": "layer", "args":[1,5]}]
                 },
                 {
-                    "id": "level2",
-                    "displayText": "Level 2",
-                    "gridArea": ["5", "5", "6", "6"],
-                    "class": "orange",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "level0",
-                    "displayText": "Level 0",
-                    "gridArea": ["3", "5", "4", "6"],
-                    "class": "orange",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "miss",
-                    "displayText": "Miss",
-                    "gridArea": ["5", "4", "6", "5"],
-                    "class": "red",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "drop",
-                    "displayText": "Drop",
-                    "gridArea": ["5", "4", "6", "5"],
-                    "class": "red",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                }
-            ],
-            [
-                {
-                    "id": "startGame",
-                    "displayText": "Start",
-                    "gridArea": ["1", "2", "2", "5"],
-                    "class": "gray",
-                    "type": "match-control",
-                    "executables": []
-                },
-                {
-                    "id": "undo",
-                    "displayText": "Undo",
-                    "gridArea": ["5", "2", "6", "3"],
-                    "class": "green",
-                    "type": "undo",
-                    "executables": []
-                },
-                {
-                    "id": "HPIntake",
-                    "displayText": "HP Platform Intake",
-                    "gridArea": ["4", "1", "5", "2"],
-                    "class": "navy",
-                    "type": "action",
-                    "executables": [{"type": "constantPosition", "args":[{"x":10,"y":85}]}]
-                },
-                {
-                    "id": "groundIntake",
-                    "displayText": "Ground Intake",
-                    "gridArea": ["5", "1", "6", "2"],
-                    "class": "navy",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "level1",
-                    "displayText": "Level 1",
-                    "gridArea": ["4", "5", "5", "6"],
-                    "class": "orange",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "level2",
-                    "displayText": "Level 2",
-                    "gridArea": ["5", "5", "6", "6"],
-                    "class": "orange",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "level0",
-                    "displayText": "Level 0",
-                    "gridArea": ["3", "5", "4", "6"],
-                    "class": "orange",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "miss",
-                    "displayText": "Miss",
-                    "gridArea": ["5", "4", "6", "5"],
-                    "class": "red",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "drop",
-                    "displayText": "Drop",
-                    "gridArea": ["5", "4", "6", "5"],
-                    "class": "red",
-                    "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
-                },
-                {
-                    "id": "engageStation",
-                    "displayText": "Engage Charging Station",
+                    "id": "dockStation",
+                    "displayText": "Charging Station",
                     "gridArea": ["3", "2", "4", "5"],
                     "class": "gray",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[3,4]}]
+                }
+            ],
+            [
+                {
+                    "id": "startGame",
+                    "displayText": "Start",
+                    "gridArea": ["1", "2", "2", "5"],
+                    "class": "gray",
+                    "type": "match-control",
+                    "executables": []
+                }  
+            ],
+            [
+                {
+                    "id": "startGame",
+                    "displayText": "Start",
+                    "gridArea": ["1", "2", "2", "5"],
+                    "class": "gray",
+                    "type": "match-control",
+                    "executables": []
+                },
+                {
+                    "id": "undo",
+                    "displayText": "Undo",
+                    "gridArea": ["5", "2", "6", "3"],
+                    "class": "green",
+                    "type": "undo",
+                    "executables": []
+                },
+                {
+                    "id": "intakeCone",
+                    "displayText": "Intake Cone",
+                    "gridArea": ["5", "1", "6", "2"],
+                    "class": "navy",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[3,6]}]
+                },
+                {
+                    "id": "intakeCube",
+                    "displayText": "Intake Cube",
+                    "gridArea": ["4", "1", "4", "2"],
+                    "class": "navy",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[1,6]}]
+                },
+                {
+                    "id": "defense",
+                    "displayText": "Got Defended",
+                    "gridArea": ["5", "5", "5", "5"],
+                    "class": "navy",
+                    "type": "action",
+                    "executables": []
                 },
                 {
                     "id": "dockStation",
@@ -309,7 +189,108 @@
                     "type": "action",
                     "executables": [{"type": "layer", "args":[4,3]}]
                 }
+            ],
+            [
+                {
+                    "id": "startGame",
+                    "displayText": "Start",
+                    "gridArea": ["1", "2", "2", "5"],
+                    "class": "gray",
+                    "type": "match-control",
+                    "executables": []
+                },
+                {
+                    "id": "level1",
+                    "displayText": "Level 1",
+                    "gridArea": ["4", "3", "5", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[5,1]}]
+                },
+                {
+                    "id": "level2",
+                    "displayText": "Level 2",
+                    "gridArea": ["5", "3", "6", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[5,1]}]
+                },
+                {
+                    "id": "level0",
+                    "displayText": "Level 0",
+                    "gridArea": ["3", "3", "4", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[5,1]}]
+                },
+                {
+                    "id": "miss",
+                    "displayText": "Miss",
+                    "gridArea": ["5", "2", "6", "3"],
+                    "class": "red",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[5,1]}]
+                },
+                {
+                    "id": "drop",
+                    "displayText": "Drop",
+                    "gridArea": ["5", "4", "6", "5"],
+                    "class": "red",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[5,1]}]
+                }
+            ],
+            [
+                {
+                    "id": "startGame",
+                    "displayText": "Start",
+                    "gridArea": ["1", "2", "2", "5"],
+                    "class": "gray",
+                    "type": "match-control",
+                    "executables": []
+                },
+                {
+                    "id": "level1",
+                    "displayText": "Level 1",
+                    "gridArea": ["4", "3", "5", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[6,3]}]
+                },
+                {
+                    "id": "level2",
+                    "displayText": "Level 2",
+                    "gridArea": ["5", "3", "6", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[6,3]}]
+                },
+                {
+                    "id": "level0",
+                    "displayText": "Level 0",
+                    "gridArea": ["3", "3", "4", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[6,3]}]
+                },
+                {
+                    "id": "miss",
+                    "displayText": "Miss",
+                    "gridArea": ["5", "2", "6", "3"],
+                    "class": "red",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[6,3]}]
+                },
+                {
+                    "id": "drop",
+                    "displayText": "Drop",
+                    "gridArea": ["5", "4", "6", "5"],
+                    "class": "red",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[6,3]}]
+                }
             ]
+           
         ]
     }
 }
