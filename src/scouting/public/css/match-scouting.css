@@ -35,6 +35,21 @@
     box-shadow: 0 0 8px 0px #838383;
 	transition: 0.2s border, 0.2s box-shadow
 }
+
+#match-scouting .grid-text {
+    border-radius: var(--border-radius, 16px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: max(3.2vw, 20px);
+    line-height: 1em;
+    cursor: auto;
+    overflow: hidden;
+    box-shadow: 0 0 8px 0px #838383;
+	transition: 0.2s border, 0.2s box-shadow
+}
+
 #match-scouting .grid-button:active {
     box-shadow: 0 0 12px 0px #222222;
     font-size: 3.3vw;

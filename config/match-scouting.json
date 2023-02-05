@@ -61,7 +61,7 @@
                     "gridArea": ["5", "1", "6", "2"],
                     "class": "navy",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[1,5]}]
+                    "executables": [{"type": "layer", "args":[1,4]}]
                 },
                 {
                     "id": "intakeCube",
@@ -69,7 +69,15 @@
                     "gridArea": ["4", "1", "4", "2"],
                     "class": "navy",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[1,5]}]
+                    "executables": [{"type": "layer", "args":[1,4]}]
+                },
+                {
+                    "id": "comments",
+                    "displayText": "Comments",
+                    "gridArea": ["5", "3", "6", "3"],
+                    "class": "navy",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[1,7]}]
                 },
                 {
                     "id": "shootPreload",
@@ -121,7 +129,7 @@
                     "gridArea": ["5", "1", "6", "2"],
                     "class": "navy",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[3,6]}]
+                    "executables": [{"type": "layer", "args":[1,6]}]
                 },
                 {
                     "id": "intakeCube",
@@ -130,6 +138,14 @@
                     "class": "navy",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[1,6]}]
+                },
+                {
+                    "id": "comments",
+                    "displayText": "Comments",
+                    "gridArea": ["5", "3", "6", "3"],
+                    "class": "navy",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[1,7]}]
                 },
                 {
                     "id": "defense",
@@ -289,6 +305,20 @@
                     "type": "action",
                     "executables": [{"type": "layer", "args":[6,3]}]
                 }
+            ],
+            [
+                {
+                    "id": "submit",
+                    "gridArea": ["5", "1", "2", "10"]
+                },
+                {
+                    "id": "submitComment",
+                    "displayText": "Submit Comment",
+                    "gridArea": ["5", "3", "6", "4"],
+                    "class": "green",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[6,3]}]
+                }    
             ]
            
         ]
