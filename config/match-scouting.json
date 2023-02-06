@@ -176,7 +176,7 @@
                 {
                     "id": "undo",
                     "displayText": "Undo",
-                    "gridArea": ["5", "2", "6", "5"],
+                    "gridArea": ["5", "1", "6", "3"],
                     "class": "green",
                     "type": "undo",
                     "executables": []
@@ -187,7 +187,7 @@
                     "gridArea": ["3", "1", "4", "2"],
                     "class": "pink",
                     "type": "action",
-                    "executables": [{"type":"chargeHighlight","args":[]}]
+                    "executables": [{"type":"chargeHighlight","args":[4,3]}]
                 },
                 {
                     "id": "charge2",
@@ -195,7 +195,15 @@
                     "gridArea": ["3", "2", "4", "3"],
                     "class": "pink",
                     "type": "action",
-                    "executables": [{"type":"chargeHighlight","args":[]}]
+                    "executables": [{"type":"chargeHighlight","args":[4,3]}]
+                },
+                {
+                    "id": "comments",
+                    "displayText": "Comments",
+                    "gridArea": ["5", "4", "6", "7"],
+                    "class": "navy",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[1,7]}]
                 },
                 {
                     "id": "chargeF",
@@ -317,7 +325,7 @@
                     "gridArea": ["5", "3", "6", "4"],
                     "class": "green",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[6,3]}]
+                    "executables": [{"type": "layer", "args":[6,3]}] 
                 }    
             ]
            
