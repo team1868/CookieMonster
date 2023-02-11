@@ -61,7 +61,7 @@
                     "gridArea": ["5", "1", "6", "2"],
                     "class": "navy",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[1,4]}]
+                    "executables": [{"type": "layer", "args":[1,5]}]
                 },
                 {
                     "id": "intakeCube",
@@ -69,15 +69,7 @@
                     "gridArea": ["4", "1", "4", "2"],
                     "class": "navy",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[1,4]}]
-                },
-                {
-                    "id": "comments",
-                    "displayText": "Comments",
-                    "gridArea": ["5", "3", "6", "3"],
-                    "class": "navy",
-                    "type": "action",
-                    "executables": [{"type": "layer", "args":[1,7]}]
+                    "executables": [{"type": "layer", "args":[1,5]}]
                 },
                 {
                     "id": "shootPreload",
@@ -156,6 +148,14 @@
                     "executables": []
                 },
                 {
+                    "id": "shootPreload",
+                    "displayText": "Shoot Preload",
+                    "gridArea": ["4", "5", "4", "5"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[3,6]}]
+                },
+                {
                     "id": "dockStation",
                     "displayText": "Charging Station",
                     "gridArea": ["3", "2", "4", "5"],
@@ -187,7 +187,7 @@
                     "gridArea": ["3", "1", "4", "2"],
                     "class": "pink",
                     "type": "action",
-                    "executables": [{"type":"chargeHighlight","args":[4,3]}]
+                    "executables": [{"type":"layer","args":[4,3]}]
                 },
                 {
                     "id": "charge2",
@@ -195,15 +195,7 @@
                     "gridArea": ["3", "2", "4", "3"],
                     "class": "pink",
                     "type": "action",
-                    "executables": [{"type":"chargeHighlight","args":[4,3]}]
-                },
-                {
-                    "id": "comments",
-                    "displayText": "Comments",
-                    "gridArea": ["5", "4", "6", "7"],
-                    "class": "navy",
-                    "type": "action",
-                    "executables": [{"type": "layer", "args":[1,7]}]
+                    "executables": [{"type":"layer","args":[4,3]}]
                 },
                 {
                     "id": "chargeF",
@@ -262,6 +254,14 @@
                     "class": "red",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[5,1]}]
+                },
+                {
+                    "id": "undo",
+                    "displayText": "Undo",
+                    "gridArea": ["5", "5", "6", "5"],
+                    "class": "green",
+                    "type": "undo",
+                    "executables": []
                 }
             ],
             [
@@ -312,6 +312,14 @@
                     "class": "red",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[6,3]}]
+                },
+                {
+                    "id": "undo",
+                    "displayText": "Undo",
+                    "gridArea": ["5", "5", "6", "5"],
+                    "class": "green",
+                    "type": "undo",
+                    "executables": []
                 }
             ],
             [
