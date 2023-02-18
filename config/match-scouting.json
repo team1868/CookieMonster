@@ -33,57 +33,73 @@
                     "id": "preloadCone",
                     "displayText": "Preload Cone",
                     "gridArea": ["2", "2", "3", "3"],
-                    "class": "orange",
+                    "class": "purple",
                     "type": "action",
-                    "executables": [{"type": "hide", "args":[]}]
+                    "executables": []
                 },
                 {
                     "id": "preloadCube",
                     "displayText": "Preload Cube",
                     "gridArea": ["2", "5", "3", "4"],
-                    "class": "orange",
+                    "class": "purple",
                     "type": "action",
-                    "executables": [{"type": "hide", "args":[]}]
-                },
-                {
-                    "id": "position2",
-                    "displayText": "2",
-                    "gridArea": ["5", "2", "6", "3"],
-                    "class": "orange",
-                    "type": "action",
-                    "executables": [{"type": "hide", "args":[]}]
+                    "executables": []
                 },
                 {
                     "id": "position1",
                     "displayText": "1",
-                    "gridArea": ["5", "1", "6", "2"],
-                    "class": "orange",
+                    "gridArea": ["3", "1", "4", "2"],
+                    "class": "purple",
                     "type": "action",
-                    "executables": [{"type": "hide", "args":[]}]
+                    "executables": []
                 },
                 {
-                    "id": "position4",
-                    "displayText": "4",
-                    "gridArea": ["5", "4", "6", "5"],
-                    "class": "orange",
+                    "id": "position2",
+                    "displayText": "2",
+                    "gridArea": ["4", "1", "4", "2"],
+                    "class": "purple",
                     "type": "action",
-                    "executables": [{"type": "hide", "args":[]}]
+                    "executables": []
                 },
                 {
                     "id": "position3",
                     "displayText": "3",
-                    "gridArea": ["5", "3", "6", "3"],
-                    "class": "orange",
+                    "gridArea": ["5", "1", "6", "2"],
+                    "class": "purple",
                     "type": "action",
-                    "executables": [{"type": "hide", "args":[]}]
+                    "executables": []
+                },
+                {
+                    "id": "position4",
+                    "displayText": "4",
+                    "gridArea": ["3", "5", "4", "5"],
+                    "class": "purple",
+                    "type": "action",
+                    "executables": []
                 },
                 {
                     "id": "position5",
                     "displayText": "5",
-                    "gridArea": ["5", "5", "5", "5"],
-                    "class": "orange",
+                    "gridArea": ["4","5","4","5"],
+                    "class": "purple",
                     "type": "action",
-                    "executables": [{"type": "position", "args":[]}]
+                    "executables": []
+                },
+                {
+                    "id": "position6",
+                    "displayText": "6",
+                    "gridArea": ["5", "5", "5", "5"],
+                    "class": "purple",
+                    "type": "action",
+                    "executables": []
+                },
+                {
+                    "id": "undo",
+                    "displayText": "Undo",
+                    "gridArea": ["2", "3", "3", "3"],
+                    "class": "green",
+                    "type": "undo",
+                    "executables": []
                 }
             ],
             [
@@ -115,7 +131,7 @@
                     "id": "intakeCone",
                     "displayText": "Intake Cone",
                     "gridArea": ["5", "1", "6", "2"],
-                    "class": "navy",
+                    "class": "grey",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[1,8]}]
                 },
@@ -123,7 +139,7 @@
                     "id": "intakeCube",
                     "displayText": "Intake Cube",
                     "gridArea": ["4", "1", "4", "2"],
-                    "class": "navy",
+                    "class": "grey",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[1,8]}]
                 },
@@ -131,7 +147,7 @@
                     "id": "shootPreload",
                     "displayText": "Shoot Preload",
                     "gridArea": ["4", "5", "4", "5"],
-                    "class": "orange",
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[1,5]}]
                 },
@@ -175,7 +191,7 @@
                     "id": "intakeCone",
                     "displayText": "Intake Cone",
                     "gridArea": ["5", "1", "6", "2"],
-                    "class": "navy",
+                    "class": "grey",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[3,9]}]
                 },
@@ -183,7 +199,7 @@
                     "id": "intakeCube",
                     "displayText": "Intake Cube",
                     "gridArea": ["4", "1", "4", "2"],
-                    "class": "navy",
+                    "class": "grey",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[3,9]}]
                 },
@@ -191,7 +207,7 @@
                     "id": "comments",
                     "displayText": "Comments",
                     "gridArea": ["5", "3", "6", "3"],
-                    "class": "navy",
+                    "class": "pink",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[1,7]}]
                 },
@@ -199,7 +215,7 @@
                     "id": "defense",
                     "displayText": "Got Defended",
                     "gridArea": ["5", "5", "5", "5"],
-                    "class": "navy",
+                    "class": "grey",
                     "type": "action",
                     "executables": []
                 },
@@ -207,7 +223,7 @@
                     "id": "shootPreload",
                     "displayText": "Shoot Preload",
                     "gridArea": ["4", "5", "4", "5"],
-                    "class": "orange",
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[3,5]}]
                 },
@@ -257,7 +273,7 @@
                     "id": "chargeF",
                     "displayText": "Fall",
                     "gridArea": ["3", "5", "4", "6"],
-                    "class": "red",
+                    "class": "blue",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[4,3]}]
                 }
@@ -275,7 +291,7 @@
                     "id": "level1",
                     "displayText": "Level 1",
                     "gridArea": ["4", "3", "5", "3"],
-                    "class": "orange",
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[5,1]}]
                 },
@@ -283,7 +299,7 @@
                     "id": "level2",
                     "displayText": "Level 2",
                     "gridArea": ["5", "3", "6", "3"],
-                    "class": "orange",
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[5,1]}]
                 },
@@ -291,7 +307,7 @@
                     "id": "level0",
                     "displayText": "Level 0",
                     "gridArea": ["3", "3", "4", "3"],
-                    "class": "orange",
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[5,1]}]
                 },
@@ -299,7 +315,7 @@
                     "id": "miss",
                     "displayText": "Miss",
                     "gridArea": ["5", "2", "6", "3"],
-                    "class": "red",
+                    "class": "blue",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[5,1]}]
                 },
@@ -307,7 +323,7 @@
                     "id": "drop",
                     "displayText": "Drop",
                     "gridArea": ["5", "4", "6", "5"],
-                    "class": "red",
+                    "class": "blue",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[5,1]}]
                 },
@@ -333,7 +349,7 @@
                     "id": "level1",
                     "displayText": "Level 1",
                     "gridArea": ["4", "3", "5", "3"],
-                    "class": "orange",
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[6,3]}]
                 },
@@ -341,7 +357,7 @@
                     "id": "level2",
                     "displayText": "Level 2",
                     "gridArea": ["5", "3", "6", "3"],
-                    "class": "orange",
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[6,3]}]
                 },
@@ -349,7 +365,7 @@
                     "id": "level0",
                     "displayText": "Level 0",
                     "gridArea": ["3", "3", "4", "3"],
-                    "class": "orange",
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[6,3]}]
                 },
@@ -357,7 +373,7 @@
                     "id": "miss",
                     "displayText": "Miss",
                     "gridArea": ["5", "2", "6", "3"],
-                    "class": "red",
+                    "class": "blue",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[6,3]}]
                 },
@@ -365,7 +381,7 @@
                     "id": "drop",
                     "displayText": "Drop",
                     "gridArea": ["5", "4", "6", "5"],
-                    "class": "red",
+                    "class": "blue",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[6,3]}]
                 },
@@ -387,7 +403,7 @@
                     "id": "submitComment",
                     "displayText": "Submit Comment",
                     "gridArea": ["5", "3", "6", "4"],
-                    "class": "green",
+                    "class": "pink",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[6,3]}] 
                 }    
@@ -396,39 +412,39 @@
                 {
                     "id": "HPPlatform",
                     "displayText": "HP Platform",
-                    "gridArea": ["5", "2", "6", "3"],
-                    "class": "orange",
+                    "gridArea": ["3", "2", "4", "3"],
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[8,5]}]
                 },
                 {
                     "id": "doubleHPDrop",
                     "displayText": "Double HP Drop",
-                    "gridArea": ["5", "1", "6", "2"],
-                    "class": "orange",
+                    "gridArea": ["3", "1", "4", "2"],
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[8,5]}]
                 },
                 {
                     "id": "chuteIntake",
                     "displayText": "Single HP Intake",
-                    "gridArea": ["5", "4", "6", "5"],
-                    "class": "orange",
+                    "gridArea": ["3", "4", "4", "5"],
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[8,5]}]
                 },
                 {
                     "id": "anywhereElse",
                     "displayText": "Anywhere Else",
-                    "gridArea": ["5", "3", "6", "3"],
-                    "class": "orange",
+                    "gridArea": ["3", "3", "4", "3"],
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[8,5]}]
                 },
                 {
                     "id": "undo",
                     "displayText": "Undo",
-                    "gridArea": ["5", "5", "5", "5"],
+                    "gridArea": ["3", "5", "4", "5"],
                     "class": "green",
                     "type": "undo",
                     "executables": []
@@ -438,39 +454,39 @@
                 {
                     "id": "HPPlatform",
                     "displayText": "HP Platform",
-                    "gridArea": ["5", "2", "6", "3"],
-                    "class": "orange",
+                    "gridArea": ["3", "2", "4", "3"],
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[9,6]}]
                 },
                 {
                     "id": "doubleHPDrop",
                     "displayText": "Double HP Drop",
-                    "gridArea": ["5", "1", "6", "2"],
-                    "class": "orange",
+                    "gridArea": ["3", "1", "4", "2"],
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[9,6]}]
                 },
                 {
                     "id": "chuteIntake",
                     "displayText": "Single HP Intake",
-                    "gridArea": ["5", "4", "6", "5"],
-                    "class": "orange",
+                    "gridArea": ["3", "4", "4", "5"],
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[9,6]}]
                 },
                 {
                     "id": "anywhereElse",
                     "displayText": "Anywhere Else",
-                    "gridArea": ["5", "3", "6", "3"],
-                    "class": "orange",
+                    "gridArea": ["3", "3", "4", "3"],
+                    "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[9,6]}]
                 },
                 {
                     "id": "undo",
                     "displayText": "Undo",
-                    "gridArea": ["5", "5", "5", "5"],
+                    "gridArea": ["3", "5", "4", "5"],
                     "class": "green",
                     "type": "undo",
                     "executables": []
@@ -513,7 +529,7 @@
                     "id": "chargeF",
                     "displayText": "Fall",
                     "gridArea": ["3", "5", "4", "6"],
-                    "class": "red",
+                    "class": "blue",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[10,1]}]
                 }

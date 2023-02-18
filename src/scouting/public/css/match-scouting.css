@@ -60,27 +60,27 @@
 }
 
 .green {
-    background-color: #4caf50
+    background-color: #4e7c60
 }
 
-.orange {
-    background-color: #ef6c00   
+.purple {
+    background-color: #8c6d9e  
 }
 
-.red {
-    background-color: #ff4436
+.blue {
+    background-color: #6d839e
 }
 
-.navy {
-    background-color: #3f51b5
+.grey {
+    background-color: #6d839e
 }
 
 .pink {
-    background-color: #f06292
+    background-color:  #c38aaf
 }
 
 .highlight {
-    background-color: #72409c;
+    background-color: #e27171;
 }
 
 .disabled {
