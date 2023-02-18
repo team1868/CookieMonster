@@ -28,6 +28,62 @@
                     "class": "gray timer",
                     "type": "match-control",
                     "executables": []
+                },
+                {
+                    "id": "preloadCone",
+                    "displayText": "Preload Cone",
+                    "gridArea": ["2", "2", "3", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "hide", "args":[]}]
+                },
+                {
+                    "id": "preloadCube",
+                    "displayText": "Preload Cube",
+                    "gridArea": ["2", "5", "3", "4"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "hide", "args":[]}]
+                },
+                {
+                    "id": "position2",
+                    "displayText": "2",
+                    "gridArea": ["5", "2", "6", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "hide", "args":[]}]
+                },
+                {
+                    "id": "position1",
+                    "displayText": "1",
+                    "gridArea": ["5", "1", "6", "2"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "hide", "args":[]}]
+                },
+                {
+                    "id": "position4",
+                    "displayText": "4",
+                    "gridArea": ["5", "4", "6", "5"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "hide", "args":[]}]
+                },
+                {
+                    "id": "position3",
+                    "displayText": "3",
+                    "gridArea": ["5", "3", "6", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "hide", "args":[]}]
+                },
+                {
+                    "id": "position5",
+                    "displayText": "5",
+                    "gridArea": ["5", "5", "5", "5"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "position", "args":[]}]
                 }
             ],
             [
@@ -61,7 +117,7 @@
                     "gridArea": ["5", "1", "6", "2"],
                     "class": "navy",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[1,5]}]
+                    "executables": [{"type": "layer", "args":[1,8]}]
                 },
                 {
                     "id": "intakeCube",
@@ -69,7 +125,7 @@
                     "gridArea": ["4", "1", "4", "2"],
                     "class": "navy",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[1,5]}]
+                    "executables": [{"type": "layer", "args":[1,8]}]
                 },
                 {
                     "id": "shootPreload",
@@ -85,7 +141,7 @@
                     "gridArea": ["3", "2", "4", "5"],
                     "class": "gray",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[3,4]}]
+                    "executables": [{"type": "layer", "args":[3,10]}]
                 }
             ],
             [
@@ -121,7 +177,7 @@
                     "gridArea": ["5", "1", "6", "2"],
                     "class": "navy",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[1,6]}]
+                    "executables": [{"type": "layer", "args":[3,9]}]
                 },
                 {
                     "id": "intakeCube",
@@ -129,7 +185,7 @@
                     "gridArea": ["4", "1", "4", "2"],
                     "class": "navy",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[1,6]}]
+                    "executables": [{"type": "layer", "args":[3,9]}]
                 },
                 {
                     "id": "comments",
@@ -153,7 +209,7 @@
                     "gridArea": ["4", "5", "4", "5"],
                     "class": "orange",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[3,6]}]
+                    "executables": [{"type": "layer", "args":[3,5]}]
                 },
                 {
                     "id": "dockStation",
@@ -176,7 +232,7 @@
                 {
                     "id": "undo",
                     "displayText": "Undo",
-                    "gridArea": ["5", "1", "6", "3"],
+                    "gridArea": ["3", "3", "4", "5"],
                     "class": "green",
                     "type": "undo",
                     "executables": []
@@ -335,6 +391,132 @@
                     "type": "action",
                     "executables": [{"type": "layer", "args":[6,3]}] 
                 }    
+            ],
+            [
+                {
+                    "id": "HPPlatform",
+                    "displayText": "HP Platform",
+                    "gridArea": ["5", "2", "6", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[8,5]}]
+                },
+                {
+                    "id": "doubleHPDrop",
+                    "displayText": "Double HP Drop",
+                    "gridArea": ["5", "1", "6", "2"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[8,5]}]
+                },
+                {
+                    "id": "chuteIntake",
+                    "displayText": "Single HP Intake",
+                    "gridArea": ["5", "4", "6", "5"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[8,5]}]
+                },
+                {
+                    "id": "anywhereElse",
+                    "displayText": "Anywhere Else",
+                    "gridArea": ["5", "3", "6", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[8,5]}]
+                },
+                {
+                    "id": "undo",
+                    "displayText": "Undo",
+                    "gridArea": ["5", "5", "5", "5"],
+                    "class": "green",
+                    "type": "undo",
+                    "executables": []
+                }
+            ],
+            [
+                {
+                    "id": "HPPlatform",
+                    "displayText": "HP Platform",
+                    "gridArea": ["5", "2", "6", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[9,6]}]
+                },
+                {
+                    "id": "doubleHPDrop",
+                    "displayText": "Double HP Drop",
+                    "gridArea": ["5", "1", "6", "2"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[9,6]}]
+                },
+                {
+                    "id": "chuteIntake",
+                    "displayText": "Single HP Intake",
+                    "gridArea": ["5", "4", "6", "5"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[9,6]}]
+                },
+                {
+                    "id": "anywhereElse",
+                    "displayText": "Anywhere Else",
+                    "gridArea": ["5", "3", "6", "3"],
+                    "class": "orange",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[9,6]}]
+                },
+                {
+                    "id": "undo",
+                    "displayText": "Undo",
+                    "gridArea": ["5", "5", "5", "5"],
+                    "class": "green",
+                    "type": "undo",
+                    "executables": []
+                }   
+            ],
+            [
+                {
+                    "id": "startGame",
+                    "displayText": "Start",
+                    "gridArea": ["1", "2", "2", "5"],
+                    "class": "gray",
+                    "type": "match-control",
+                    "executables": []
+                },
+                {
+                    "id": "undo",
+                    "displayText": "Undo",
+                    "gridArea": ["3", "3", "4", "5"],
+                    "class": "green",
+                    "type": "undo",
+                    "executables": [{"type":"layer","args":[10,1]}]
+                },
+                {
+                    "id": "charge1",
+                    "displayText": "Docked",
+                    "gridArea": ["3", "1", "4", "2"],
+                    "class": "pink",
+                    "type": "action",
+                    "executables": [{"type":"layer","args":[10,1]}]
+                },
+                {
+                    "id": "charge2",
+                    "displayText": "Engaged",
+                    "gridArea": ["3", "2", "4", "3"],
+                    "class": "pink",
+                    "type": "action",
+                    "executables": [{"type":"layer","args":[10,1]}]
+                },
+                {
+                    "id": "chargeF",
+                    "displayText": "Fall",
+                    "gridArea": ["3", "5", "4", "6"],
+                    "class": "red",
+                    "type": "action",
+                    "executables": [{"type": "layer", "args":[10,1]}]
+                }
             ]
            
         ]
