@@ -1,3 +1,5 @@
+const TeamMatchPerformance = require("../../../lib/db");
+
 //load the service worker, allows for offline analysis
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', function () {
@@ -108,7 +110,8 @@ if ('serviceWorker' in navigator) {
 	//call setData on every module in teams
 	async function setTeamModules(teamNumber) {
 		for (const module of modules.team) {
-			await module.setData(await module.formatData([teamNumber], dataset))
+			//TODO: check if it should be dataset or TeamMatchPerformance
+			await module.setData(await module.formatData([teamNumber], TeamMatchPerformance.find({robotNumber: teamNumber}))) //why is the entire data set going through this 
 		}
 	}
 

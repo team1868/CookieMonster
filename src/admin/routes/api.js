@@ -29,7 +29,6 @@ router.get("/scouters", (req,res) => {
     } else {
         res.json({error: "Not Authorized"})
     }
-   // console.log("NISHKA_DEBUG-2:", res)
 });
 
 router.get("/data", async (req,res) => {
