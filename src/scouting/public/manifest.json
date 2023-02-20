@@ -1,6 +1,6 @@
 {
-    "name": "CookieMonster Scouting",
-    "short_name": "CookieMonster",
+    "name": "Cookie Monster Scouting",
+    "short_name": "Cookie Monster",
     "description": "An open source modular scouting app developed by Team 3061 Huskie Robotics and Team 1868 Space Cookies.",
     "display": "fullscreen",
     "orientation": "landscape",
