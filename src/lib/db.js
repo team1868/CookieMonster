@@ -58,9 +58,9 @@ const teamMatchPerformanceSchema = new mongoose.Schema({
             other: {}, //extra information like position, tied to the ACTION not the team or robot
         }
     ]     
-}, {collection: "teamMatchPerformances"})
+}, {collection: "testCollection"})
 
-const TeamMatchPerformance = new mongoose.model("TeamMatchPerformance", teamMatchPerformanceSchema)
+const TeamMatchPerformance = new mongoose.model("testCollection", teamMatchPerformanceSchema)
 
 module.exports = {
     db,

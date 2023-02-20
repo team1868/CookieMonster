@@ -1,10 +1,10 @@
 {
    "timing": {
-       "totalTime": 150,
+       "totalTime": 15,
        "timeTransitions": {
-           "150": {"layer": 0, "displayText": "Auto"},
-           "135": {"layer": 1, "displayText": "Teleop"},
-           "30": {"layer": 2, "displayText": "Endgame"}
+           "15": {"layer": 0, "displayText": "Auto"},
+           "10": {"layer": 1, "displayText": "Teleop"},
+           "5": {"layer": 2, "displayText": "Endgame"}
        }
    },
    "layout": {
