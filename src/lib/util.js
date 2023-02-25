@@ -7,7 +7,7 @@ class ThrowError {} //this is probably not best practice, I tried to find a bett
  * @param {*} ifnone - returned if the path does not exist in the object. If this isn't defined getPath will throw an error if the path doesnt exist.
  * @returns 
  */
-function getPath(obj,path,ifnone=ThrowError) {
+function getPath(obj,path,ifnone) {
     if (typeof obj === "undefined") {  
         if (ifnone == ThrowError)  {
             throw new Error("path not traversable!");

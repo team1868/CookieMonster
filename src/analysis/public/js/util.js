@@ -19,7 +19,7 @@ function clearDiv(div) {
 }
 
 
-function getPath(obj,path,ifnone=ThrowError) {
+function getPath(obj,path,ifnone) {
     if (typeof obj === "undefined") {  
         if (ifnone == ThrowError)  {
             throw new Error("path not traversable!");
