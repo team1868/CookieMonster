@@ -83,7 +83,6 @@ let devEnd
 				updateLastAction()
             })
         },
-
         "match-control": (button) => {
             button.element.innerText = "Start Match";
             button.element.addEventListener("click", async () => {
