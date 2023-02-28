@@ -81,7 +81,7 @@
 }
 
 .image {
-    background: '/img/Bobcat_Montana_de_Oro.jpg';
+    background-image: url('./fieldimage.jpg');
     background-position: center;
     background-size: contain;
     width: 100%;
