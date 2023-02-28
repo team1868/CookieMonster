@@ -18,11 +18,12 @@
     {
         "type": "team",
         "name": "sum",
-        "outputPath": "counts.balls",
+        "outputPath": "counts.gamepeices",
         "options": {
             "addends": [
-                "counts.upperHub",
-                "counts.lowerHub",
+                "counts.level2",
+                "counts.level1",
+                "counts.level0",
                 "counts.miss"
             ]
         }
@@ -48,10 +49,10 @@
     {
         "type": "team",
         "name": "ratio",
-        "outputPath": "timePerBall",
+        "outputPath": "timePerGamepiece",
         "options": {
             "numerator": ["temp.totalTimeMs"],
-            "denominator": ["counts.balls"]
+            "denominator": ["counts.gamepeices"]
         },
         "divByZero": 150000
     },
@@ -62,12 +63,13 @@
         "outputPath": "cycle",
         "options": {
             "pickups": [
-                "groundPickup",
-                "terminalPickup"
+                "groundIntake",
+                "HPIntake"
             ],
             "scores": [
-                "upperHub",
-                "lowerHub"
+                "level2",
+                "level1",
+                "level0"
             ],
             "misses": [
                 "miss"
@@ -123,12 +125,14 @@
         "outputPath": "accuracy",
         "options": {
             "numerator": [
-                "counts.lowerHub",
-                "counts.upperHub"
+                "counts.level1",
+                "counts.level2",
+                "counts.level0"
             ],
             "denominator": [
-                "counts.lowerHub",
-                "counts.upperHub",
+                "counts.level0",
+                "counts.level1",
+                "counts.level2",
                 "counts.miss"
             ],
             "divByZero": 0
@@ -140,12 +144,14 @@
         "outputPath": "accuracy",
         "options": {
             "numerator": [
-                "counts.lowerHub",
-                "counts.upperHub"
+                "counts.level0",
+                "counts.level1",
+                "counts.level2"
             ],
             "denominator": [
-                "counts.lowerHub",
-                "counts.upperHub",
+                "counts.level0",
+                "counts.level1",
+                "counts.level2",
                 "counts.miss"
             ],
             "divByZero": 0
@@ -157,33 +163,33 @@
     {
         "type": "tmp",
         "name": "actionTime",
-        "outputPath": "tarmacCrossTime",
+        "outputPath": "communityZoneTime",
         "options": {
-            "actionId": "leaveTarmac"
+            "actionId": "leaveCommunity"
         }
     },
     {
         "type": "team",
         "name": "average",
-        "outputPath": "averages.tarmacCrossTime",
+        "outputPath": "averages.communityZoneTime",
         "options": {
-            "path": "tarmacCrossTime"
+            "path": "communityZoneTime"
         }
     },
     {
         "type": "tmp",
         "name": "actionTime",
-        "outputPath": "startClimbTime",
+        "outputPath": "startChargeTime",
         "options": {
-            "actionId": "startClimb"
+            "actionId": "startCharge"
         }
     },
     {
         "type": "team",
         "name": "average",
-        "outputPath": "averages.startClimbTime",
+        "outputPath": "averages.startChargeTime",
         "options": {
-            "path": "startClimbTime"
+            "path": "startChargeTime"
         }
     },
     {
@@ -209,9 +215,10 @@
         "outputPath": "scores.auto",
         "options": {
             "weightedPaths": {
-                "countsAuto.leaveTarmac": 2,
-                "countsAuto.lowerHub": 2,
-                "countsAuto.upperHub": 4
+                "countsAuto.leaveCommunity": 3,
+                "countsAuto.level0": 3,
+                "countsAuto.level1": 4,
+                "countsAuto.level2": 6
             }
         }
     },
@@ -239,8 +246,9 @@
         "outputPath": "scores.teleop",
         "options": {
             "weightedPaths": {
-                "countsTeleop.lowerHub": 1,
-                "countsTeleop.upperHub": 2
+                "countsTeleop.level0": 2,
+                "countsTeleop.level1": 3,
+                "countsTeleop.level2": 5
             }
         }
     },
@@ -248,11 +256,11 @@
     {
         "type": "tmp",
         "name": "finalActionOccurence",
-        "outputPath": "finalClimbState",
+        "outputPath": "finalChargeState",
         "options": {
-            "ids": ["climb1","climb2","climb3","climb4","climbF"],
+            "ids": ["charge1","charge2","charge3","charge4","chargeF"],
             "default": {
-                "id": "noClimb",
+                "id": "noCharge",
                 "ts": 0
             }
         }
@@ -261,131 +269,131 @@
     {
         "type": "tmp",
         "name": "map",
-        "outputPath": "climbCounts.noClimb",
+        "outputPath": "chargeCounts.noCharge",
         "options": {
-            "path": "finalClimbState.id",
+            "path": "finalChargeState.id",
             "map": {
-                "noClimb": 1,
-                "climbF": 0,
-                "climb1": 0,
-                "climb2": 0,
-                "climb3": 0,
-                "climb4": 0
+                "noCharge": 1,
+                "chargeF": 0,
+                "charge1": 0,
+                "charge2": 0,
+                "charge3": 0,
+                "charge4": 0
             }
         }
     },
     {
         "type": "tmp",
         "name": "map",
-        "outputPath": "climbCounts.climbF",
+        "outputPath": "chargeCounts.chargeF",
         "options": {
-            "path": "finalClimbState.id",
+            "path": "finalChargeState.id",
             "map": {
-                "noClimb": 0,
-                "climbF": 1,
-                "climb1": 0,
-                "climb2": 0,
-                "climb3": 0,
-                "climb4": 0
+                "noCharge": 0,
+                "chargeF": 1,
+                "charge1": 0,
+                "charge2": 0,
+                "charge3": 0,
+                "charge4": 0
             }
         }
     },
     {
         "type": "tmp",
         "name": "map",
-        "outputPath": "climbCounts.climb1",
+        "outputPath": "chargeCounts.charge1",
         "options": {
-            "path": "finalClimbState.id",
+            "path": "finalChargeState.id",
             "map": {
-                "noClimb": 0,
-                "climbF": 0,
-                "climb1": 1,
-                "climb2": 0,
-                "climb3": 0,
-                "climb4": 0
+                "noCharge": 0,
+                "chargeF": 0,
+                "charge1": 1,
+                "charge2": 0,
+                "charge3": 0,
+                "charge4": 0
             }
         }
     },
     {
         "type": "tmp",
         "name": "map",
-        "outputPath": "climbCounts.climb2",
+        "outputPath": "chargeCounts.charge2",
         "options": {
-            "path": "finalClimbState.id",
+            "path": "finalChargeState.id",
             "map": {
-                "noClimb": 0,
-                "climbF": 0,
-                "climb1": 0,
-                "climb2": 1,
-                "climb3": 0,
-                "climb4": 0
+                "noCharge": 0,
+                "chargeF": 0,
+                "charge1": 0,
+                "charge2": 1,
+                "charge3": 0,
+                "charge4": 0
             }
         }
     },
     {
         "type": "tmp",
         "name": "map",
-        "outputPath": "climbCounts.climb3",
+        "outputPath": "chargeCounts.charge3",
         "options": {
-            "path": "finalClimbState.id",
+            "path": "finalChargeState.id",
             "map": {
-                "noClimb": 0,
-                "climbF": 0,
-                "climb1": 0,
-                "climb2": 0,
-                "climb3": 1,
-                "climb4": 0
+                "noCharge": 0,
+                "chargeF": 0,
+                "charge1": 0,
+                "charge2": 0,
+                "charge3": 1,
+                "charge4": 0
             }
         }
     },
     {
         "type": "tmp",
         "name": "map",
-        "outputPath": "climbCounts.climb4",
+        "outputPath": "chargeCounts.charge4",
         "options": {
-            "path": "finalClimbState.id",
+            "path": "finalChargeState.id",
             "map": {
-                "noClimb": 0,
-                "climbF": 0,
-                "climb1": 0,
-                "climb2": 0,
-                "climb3": 0,
-                "climb4": 1
+                "nocharge": 0,
+                "chargeF": 0,
+                "charge1": 0,
+                "charge2": 0,
+                "charge3": 0,
+                "charge4": 1
             }
         }
     },
     {
         "type": "team",
         "name": "average",
-        "outputPath": "climbLevels",
+        "outputPath": "chargeLevels",
         "options": {
-            "path": "climbCounts"
+            "path": "chargeCounts"
         }
     },
     {
         "type": "team",
         "name": "average",
-        "outputPath": "averages.endClimbTime",
+        "outputPath": "averages.endChargeTime",
         "options": {
-            "path": "finalClimbState.ts"
+            "path": "finalChargeState.ts"
         }
     },
 	{
 		"type": "tmp",
 		"name": "subtract",
-		"outputPath": "climbDuration",
+		"outputPath": "chargeDuration",
 		"options": {
-			"minuend": "startClimbTime",
-			"subtrahend": "finalClimbState.ts"
+			"minuend": "startChargeTime",
+			"subtrahend": "finalChargeState.ts"
 		}
 	},
 	{
 		"type": "team",
 		"name": "subtract",
-		"outputPath": "averages.climbDuration",
+		"outputPath": "averages.chargeDuration",
 		"options": {
-			"minuend": "averages.startClimbTime",
-			"subtrahend": "averages.endClimbTime"
+			"minuend": "averages.startChargeTime",
+			"subtrahend": "averages.endChargeTime"
 		}
 	},
     {
@@ -393,14 +401,14 @@
         "name": "map",
         "outputPath": "scores.endgame",
         "options": {
-            "path": "finalClimbState.id",
+            "path": "finalChargeState.id",
             "map": {
-                "noClimb": 0,
-                "climbF": 0,
-                "climb1": 4,
-                "climb2": 6,
-                "climb3": 10,
-                "climb4": 15
+                "nocharge": 0,
+                "chargeF": 0,
+                "charge1": 4,
+                "charge2": 6,
+                "charge3": 10,
+                "charge4": 15
             }
         }
     },
@@ -424,16 +432,16 @@
 	{
 		"type": "team",
 		"name": "threshold",
-		"outputPath": "possibleClimbs",
+		"outputPath": "possibleCharge",
 		"options": {
 			"threshold": 0,
 			"separator": ", ",
 			"none": "—",
 			"paths": {
-				"climbLevels.climb1": "1",
-				"climbLevels.climb2": "2",
-				"climbLevels.climb3": "3",
-				"climbLevels.climb4": "4"
+				"chargeLevels.charge1": "1",
+				"chargeLevels.charge2": "2",
+				"chargeLevels.charge3": "3",
+				"chargeLevels.charge4": "4"
 			}
 		}
 	},
@@ -446,8 +454,8 @@
 			"separator": ", ",
 			"none": "—",
 			"paths": {
-				"averages.upperHub": "U",
-				"averages.lowerHub": "L"
+				"averages.level2": "U",
+				"averages.level1": "L"
 			}
 		}
 	}

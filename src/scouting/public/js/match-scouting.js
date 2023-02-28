@@ -48,7 +48,6 @@ let devEnd
 				updateLastAction()
             })
         },
-
         "undo": (button) => {
             button.element.addEventListener("click", () => {
                 const undoneId = actionQueue.pop().id //remove the last action from the action queue 
@@ -152,17 +151,24 @@ let devEnd
     //create button objects in layers
     for (const layer of layers) {
         for (const button of layer) {
-            button.element = document.createElement("div");
+            if (button.id == "submit"){
+                button.element = document.createElement("textarea");
+                button.element.classList.add("grid-text");
+                button.element.style.gridArea = button.gridArea.join(" / ");
+                grid.appendChild(button.element);
+            } else {
+                button.element = document.createElement("div");
             
-            //give the button element its properties
-            button.element.innerText = button.displayText || button.id;
-            button.element.classList.add("grid-button", ...button.class.split(" "));
-            button.element.style.gridArea = button.gridArea.join(" / ");
+                //give the button element its properties
+                button.element.innerText = button.displayText || button.id;
+                button.element.classList.add("grid-button", ...button.class.split(" "));
+                button.element.style.gridArea = button.gridArea.join(" / ");
             
-            //apply type to button
-            buttonBuilders[button.type](button);
-            //add the button to the grid
-            grid.appendChild(button.element);
+                //apply type to button
+                buttonBuilders[button.type](button);
+                //add the button to the grid
+                grid.appendChild(button.element);
+            }
         }
     }
 
@@ -178,7 +184,6 @@ let devEnd
             }
         }
     }
-
     function showLayer(layer) {
         for (const b of buttons) {
             b.element.style.display = "none";

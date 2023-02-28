@@ -18,7 +18,7 @@
         - `gridArea`: An array of four strings representing each element of a CSS grid-area attribute that will be applied to the button (ex. `0 / 1 / 1 / 2` becomes `["0","1","1","2"]`)
         - `class`: A CSS class to be applied to the button.
         - `type`: A string representing the type of scouting action the button represents.
-            1. `"action"`: When pressed, add a robot action to the action queue (eg. score, climb) and run any executables if applicable.
+            1. `"action"`: When pressed, add a robot action to the action queue (eg. score, charge) and run any executables if applicable.
             2. `"undo"`: When pressed, remove the last action from the action queue and run any executables if applicable.
             3. `"none"`: When pressed, run any executables if applicable without modifying the action queue.
         - `executables`: An array of objects representing custom tasks executed when the button is pressed beyond those specified by their type.

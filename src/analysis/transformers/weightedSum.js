@@ -5,7 +5,7 @@ module.exports = {
     /**
      * 
      * @type {DataTransformer}
-     * @param options.weightedPaths {Object} {"pathString": weight} (eg. {"counts.upperHub": 2} ) 
+     * @param options.weightedPaths {Object} {"pathString": weight} (eg. {"counts.level2": 2} ) 
      */
     tmp: new DataTransformer("weightedSum", (dataset, outputPath, options) => {
         for (let tmp of dataset.tmps) {
