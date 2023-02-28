@@ -233,7 +233,7 @@
                     "gridArea": ["4", "5", "4", "5"],
                     "class": "purple",
                     "type": "action",
-                    "executables": [{"type": "layer", "args":[3,5]}]
+                    "executables": [{"type": "layer", "args":[3,6]}]
                 },
                 {
                     "id": "dockStation",
