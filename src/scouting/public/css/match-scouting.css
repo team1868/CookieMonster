@@ -64,7 +64,7 @@
 }
 
 .purple {
-    background-color: #8c6d9e  
+    background-color: #8c6d9e
 }
 
 .blue {
@@ -77,6 +77,15 @@
 
 .pink {
     background-color:  #c38aaf
+    
+}
+
+.image {
+    background: '/img/Bobcat_Montana_de_Oro.jpg';
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
 }
 
 .highlight {

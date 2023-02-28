@@ -94,6 +94,14 @@
                     "executables": []
                 },
                 {
+                    "id": "",
+                    "displayText": "",
+                    "gridArea": ["3", "5", "7", "2"],
+                    "class": "image",
+                    "type": "action",
+                    "executables": []
+                },
+                {
                     "id": "undo",
                     "displayText": "Undo",
                     "gridArea": ["2", "3", "3", "3"],
