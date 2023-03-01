@@ -1,5 +1,5 @@
-# SPOT - Scouting Platforms On Time
-SPOT is an open-source modular scouting app framework for FRC developed by Team 3061 Huskie Robotics. SPOT provides a simple platform upon which a team can build a scouting app with little to no prior experience.
+# Cookie Monster
+Cookie Monster is a 2023 Charged Up scouting app based on open-source modular scouting app framework for FRC developed by Team 3061 Huskie Robotics.
 
 ## Features
 
