@@ -11,7 +11,6 @@ class PerformanceTimePlot {
         let trackedStats = this.moduleConfig.options.trackedStats;
         if (teams.length > 1) throw new Error("Can't track multiple multiple teams!")
         let teamTmps = dataset.tmps.filter(x=>x.robotNumber == teams[0]);
-
         let trackedStatTraces = {};
         for (let stat of trackedStats) {
             trackedStatTraces[stat] = {

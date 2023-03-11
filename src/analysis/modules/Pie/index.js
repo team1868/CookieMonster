@@ -8,14 +8,22 @@ class Pie {
     }
 
     formatData(teams, dataset) {
-        const values = this.moduleConfig.options.slices.map((slice) => {
-            const summed = teams.map(team => getPath(dataset.teams[team], slice.path)).flat().reduce((acc, i) => acc + i, 0)
-            if (slice.aggrMethod == "sum") { //optionally summed
-                return summed
-            } else { //default is average
-                return (summed / teams.length).toFixed(2)
-            }
-        })
+        // const time = this.moduleConfig.options.time;
+        // if (time>=){
+
+        // } 
+        // else {
+            const values = this.moduleConfig.options.slices.map((slice) => {
+                const summed = teams.map(team => getPath(dataset.teams[team], slice.path)).flat().reduce((acc, i) => acc + i, 0)
+                if (slice.aggrMethod == "sum") { //optionally summed
+                    //console.log(summed);
+                    return summed
+                } else { //default is average
+                    //console.log((summed / teams.length).toFixed(2));
+                    return (summed / teams.length).toFixed(2)
+                }
+            })
+        // }
 
         const data = [
             {
@@ -31,7 +39,7 @@ class Pie {
 
             }
         ]
-
+        console.log(data);
         return data
     }
 

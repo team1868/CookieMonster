@@ -412,7 +412,7 @@
                     "displayText": "Submit Comment",
                     "gridArea": ["5", "3", "6", "4"],
                     "class": "pink",
-                    "type": "action",
+                    "type": "comment",
                     "executables": [{"type": "layer", "args":[6,3]}] 
                 }    
             ],

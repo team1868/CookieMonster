@@ -55,12 +55,13 @@ const teamMatchPerformanceSchema = new mongoose.Schema({
         {
             id: String, //button id
             ts: Number, //timestamp of action
+            comment: String, //comment
             other: {}, //extra information like position, tied to the ACTION not the team or robot
         }
     ]     
-}, {collection: "teamMatchPerformances"})
+}, {collection: "comments"})
 
-const TeamMatchPerformance = new mongoose.model("TeamMatchPerformance", teamMatchPerformanceSchema)
+const TeamMatchPerformance = new mongoose.model("comments", teamMatchPerformanceSchema)
 
 module.exports = {
     db,

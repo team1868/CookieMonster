@@ -43,9 +43,24 @@ let devEnd
                 actionQueue.push({
                     "id": button.id,
                     "ts": time,
+                    "comment": "",
                 })
                 doExecutables(button)
 				updateLastAction()
+            })
+        },
+        //Nishka comment update for the data base
+        "comment": (button) => {
+            //recieve comments
+            button.element.addEventListener("click", () => { 
+                actionQueue.push({
+                    "id": button.id,
+                    "ts": time,
+                    "comment": document.getElementById("commentSection").value,
+                })
+                doExecutables(button)
+				updateLastAction()
+                console.log(actionQueue)
             })
         },
         "undo": (button) => {
@@ -77,6 +92,7 @@ let devEnd
                 actionQueue.push({
                     "id": button.id,
                     "ts": time,
+                    "comment": "",
                     "temp": true
                 })
                 doExecutables(button)
@@ -110,6 +126,7 @@ let devEnd
                 actionQueue.push({ //create a temporary action queue so you can undo it
                     "id": button.id,
                     "ts": time,
+                    "comment": "",
                     "temp": true
                 })
 
@@ -153,6 +170,7 @@ let devEnd
         for (const button of layer) {
             if (button.id == "submit"){
                 button.element = document.createElement("textarea");
+                button.element.setAttribute("id", "commentSection");
                 button.element.classList.add("grid-text");
                 button.element.style.gridArea = button.gridArea.join(" / ");
                 grid.appendChild(button.element);

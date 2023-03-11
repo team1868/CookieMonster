@@ -8,7 +8,7 @@ executables["multiplier"] = {
         for (let i = 0; i < numActions - 1; i++) {
             actionQueue.push({
                 "id": button.id,
-                "ts": actionQueue[actionQueue.length - 1].ts //get the time from the last action (the one created by the initial button press)
+                "ts": actionQueue[actionQueue.length - 1].ts, //get the time from the last action (the one created by the initial button press)
             });
         }
     },

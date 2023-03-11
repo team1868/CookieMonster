@@ -3,55 +3,58 @@ class HeatmapScatterPlot {
     moduleConfig;
 
     constructor(moduleConfig) {
-        this.moduleConfig = moduleConfig
-        this.container = createDOMElement("div", "container plot")
-        this.switcher = createDOMElement("div", "switcher")
-        
+        this.moduleConfig = moduleConfig;
+        this.container = createDOMElement("div", "container plot");
+        this.switcher = createDOMElement("div", "switcher");
+
     }
 
     async formatData(teams, dataset) {
-        let actionGroups = this.moduleConfig.options.actionGroups
+        let actionGroups = this.moduleConfig.options.actionGroups;
         let actions = actionGroups.reduce((acc, action) => {
-            acc.push(...action.actions)
-            return acc
-        }, [])
+            acc.push(...action.actions);
+            return acc;
+        }, []);
 
         const data = actions.reduce((acc, actionId) => {
-            const filteredActionQueue = teams.map(team => getPath(dataset.teams[team], this.moduleConfig.options.aggregatedActionsPath)).flat().filter(a => a.id == actionId)
-            // console.log(this.moduleConfig.options.actionLabels[actionId])
-			if (filteredActionQueue.length) {
-				acc.push({
-					mode: "markers",
-					type: "scatter",
-					showlegend: true,
-					name: this.moduleConfig.options.actionLabels[actionId],
-					x: filteredActionQueue.map(a => getPath(a, this.moduleConfig.options.coordinatePath).x),
-					y: filteredActionQueue.map(a => getPath(a, this.moduleConfig.options.coordinatePath).y),
-					marker: {
-						size: 16,
-						line: {
-							color: 'white',
-							width: 1
-						},
-					},
-					opacity: 0.6
-				})
-			}
+            const filteredActionQueue = teams.map(team => getPath(dataset.teams[team], this.moduleConfig.options.aggregatedActionsPath)).flat().filter(a => a.id == actionId);
+           
+            if (filteredActionQueue.length) {
+                acc.push({
+                    mode: "markers",
+                    type: "scatter",
+                    showlegend: true,
+                    name: this.moduleConfig.options.actionLabels[actionId],
+                    //x: filteredActionQueue.map(a => getPath(a, this.moduleConfig.options.coordinatePath).x),
+                    //y: filteredActionQueue.map(a => getPath(a, this.moduleConfig.options.coordinatePath).y),
+                    x: filteredActionQueue.map(a =>  this.moduleConfig.options.coordinatePath.x),
+                    y: filteredActionQueue.map(a =>  this.moduleConfig.options.coordinatePath.y),
+                    marker: {
+                        size: 16,
+                        line: {
+                            color: 'white',
+                            width: 1
+                        },
+                    },
+                    opacity: 0.6
+                });
+            }
 
-			return acc
-        }, [])
+            return acc;
+        }, []);
 
-		// console.log(data)
-
+        // console.log(data)
         const filteredAllActionQueue = teams.map(team => getPath(dataset.teams[team], this.moduleConfig.options.aggregatedActionsPath)).flat()
-            .filter(a => actionGroups[0].actions.includes(a.id))
+            .filter(a => actionGroups[0].actions.includes(a.id));
 
         data.push({
             type: "histogram2dcontour",
-			name: "Heatmap",
-			showlegend: true,
-            x: filteredAllActionQueue.map(a => getPath(a, this.moduleConfig.options.coordinatePath).x),
-            y: filteredAllActionQueue.map(a => getPath(a, this.moduleConfig.options.coordinatePath).y),
+            name: "Heatmap",
+            showlegend: true,
+            //x: filteredAllActionQueue.map(a => getPath(a, this.moduleConfig.options.coordinatePath).x),
+            //y: filteredAllActionQueue.map(a => getPath(a, this.moduleConfig.options.coordinatePath).y),
+            x: filteredAllActionQueue.map(a => this.moduleConfig.options.coordinatePath.x),
+            y: filteredAllActionQueue.map(a => this.moduleConfig.options.coordinatePath.y),
             xaxis: "x",
             yaxis: "y",
             opacity: 0.7,
@@ -69,14 +72,14 @@ class HeatmapScatterPlot {
             // },
             zmin: 0,
             showscale: false,
-            colorscale: [[0, "rgba(255,255,255,0)"],[.1, "rgba(255, 147, 115, 50)"],[1, "rgba(255, 59, 0, 255)"]],
-        })
+            colorscale: [[0, "rgba(255,255,255,0)"], [.1, "rgba(255, 147, 115, 50)"], [1, "rgba(255, 59, 0, 255)"]],
+        });
 
-        return data
+        return data;
     }
 
     async setData(data) {
-        const fieldImg = await getSvgDataPng(window.location.href + this.moduleConfig.options.imgPath)
+        const fieldImg = await getSvgDataPng(window.location.href + this.moduleConfig.options.imgPath);
 
         const layout = {
             dragmode: false,
@@ -95,21 +98,21 @@ class HeatmapScatterPlot {
             },
             legend: {
                 font: {
-                    size: 20    
+                    size: 20
                 },
                 orientation: "h",
                 itemsizing: "trace",
                 y: -3
             },
             xaxis: {
-                range: [ 0, 100 ],
+                range: [0, 100],
                 showgrid: false,
                 showticklabels: false,
                 zeroline: false,
                 showline: false
             },
             yaxis: {
-                range: [ 100, 0 ],
+                range: [100, 0],
                 showticklabels: false,
                 showgrid: false,
                 scaleanchor: "x",
@@ -136,19 +139,18 @@ class HeatmapScatterPlot {
                     "layer": "below"
                 }
             ]
-        }
+        };
 
         const config = {
             responsive: true,
             showAxisDragHandles: false,
             modeBarButtonsToRemove: ["zoom2d", "pan2d"]
-        }
+        };
 
-        Plotly.purge(this.container)
-        Plotly.newPlot(this.container, data, layout, config)
+        Plotly.purge(this.container);
+        Plotly.newPlot(this.container, data, layout, config);
     }
 }
-
 async function getSvgDataPng(url) {
     const img = document.createElement("img");
     img.src = url;

@@ -12,9 +12,11 @@ module.exports = {
             let sum = 0;
             for (let [pathString,weight] of Object.entries(options.weightedPaths)) {
                 sum += getPath(tmp, pathString, 0) * weight;
+                
             }
             setPath(tmp,outputPath,sum);
         }
+        console.log("options.weightedPaths" + options.weightedPaths);
         return dataset;
     }),
 }

@@ -1,11 +1,20 @@
 [
     {
+		"view": "team",
+		"module": "Comments",
+		"name": "Comments For The Team",
+		"position": "side"
+	},
+    {
         "view": "team",
         "module": "HeatmapScatterPlot",
         "name": "Shot Plot",
         "position": "main",
         "options": {
-            "coordinatePath": "other.pos",
+            "coordinatePath": {
+                "x" : 5,
+                "y" : 6
+            },
             "aggregatedActionsPath": "aggregatedActions",
             "actionGroups": [
                 {
@@ -19,7 +28,7 @@
                 "level0": "Level 0",
                 "miss": "Miss"
             },
-            "imgPath": "img/field.svg"
+            "imgPath": "/img/field.svg"
         }
     },
 	{
@@ -28,7 +37,10 @@
         "name": "Pickup Plot",
         "position": "main",
         "options": {
-            "coordinatePath": "other.pos",
+            "coordinatePath": {
+                "x" : 5,
+                "y" : 30
+            },
             "aggregatedActionsPath": "aggregatedActions",
             "actionGroups": [
                 {
@@ -40,7 +52,7 @@
                 "groundIntake": "Ground",
                 "HPIntake": "HP"
             },
-            "imgPath": "img/field.svg"
+            "imgPath": "/img/field.svg"
         }
     },
     {
@@ -215,7 +227,33 @@
                 },
                 {
                     "name": "Level 0",
+                    "path": "counts.level0"
+                },
+                {
+                    "name": "Miss",
+                    "path": "counts.miss"
+                }
+            ]
+        }
+    },
+    {
+        "view": "team",
+        "module": "Pie",
+        "position": "main",
+        "name": "Auto Cubes",
+        "options": {
+            "slices": [
+                {
+                    "name": "Level 2",
+                    "path": "counts.level2"
+                },
+                {
+                    "name": "Level 1",
                     "path": "counts.level1"
+                },
+                {
+                    "name": "Level 0",
+                    "path": "counts.level0"
                 },
                 {
                     "name": "Miss",
@@ -368,7 +406,7 @@
                 "level0": "level0",
                 "miss": "Miss"
             },
-            "imgPath": "img/field.svg"
+            "imgPath": "/img/field.svg"
         }
     },
 	{
@@ -389,7 +427,7 @@
                 "groundIntake": "Ground",
                 "HPIntake": "HP"
             },
-            "imgPath": "img/field.svg"
+            "imgPath": "../scouting/public/css/fieldimage.jpg"
         }
     },
     {

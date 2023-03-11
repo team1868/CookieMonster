@@ -69,7 +69,6 @@ class Stats {
 				totalRanked: totalRanked
             })
         }
-
         return data
     }
 

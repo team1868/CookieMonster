@@ -14,7 +14,7 @@ module.exports = {
 
             setPath(tmp, outputPath, summed)
         }
-
+        
         return dataset;
     }),
 
@@ -29,8 +29,9 @@ module.exports = {
             }, 0)
 
             setPath(team, outputPath, summed)
+            // console.log("Team sum xformer:", summed, "---", dataset)
         }
-
+        
         return dataset;
     })
 }

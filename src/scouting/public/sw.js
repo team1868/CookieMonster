@@ -44,11 +44,13 @@ const filesToCache = [
 	"/icons/favicon-32x32.png"
 ]
 
+//think about deleting this entire thing
 self.addEventListener('install', function(event) {
     // Perform install steps
     event.waitUntil(
         caches.open(cacheVersion)
         .then(function(cache) {
+            //error here
             return cache.addAll(filesToCache);
         })
     );
@@ -59,11 +61,13 @@ self.addEventListener('fetch', (event) => {
         caches.open(cacheVersion).then((cache) => {
             return cache.match(event.request).then((response) => {
                 event.request.importance = "low"; //low priority
+                //possible error
                 const fetchPromise = fetch(event.request).then((networkResponse) => {
                     if (filesToCache.includes((new URL(event.request.url)).pathname)) {//if the file is in the cache list
                         cache.put(event.request, networkResponse.clone());
                     }
                     return networkResponse;
+                // possible error
                 }).catch(e=>console.log(e))
 
                 return response || fetchPromise;
