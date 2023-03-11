@@ -130,7 +130,7 @@
                 {
                     "id": "undo",
                     "displayText": "Undo",
-                    "gridArea": ["5", "2", "6", "3"],
+                    "gridArea": ["4", "5", "4", "5"],
                     "class": "green",
                     "type": "undo",
                     "executables": []
@@ -154,7 +154,7 @@
                 {
                     "id": "shootPreload",
                     "displayText": "Shoot Preload",
-                    "gridArea": ["4", "5", "4", "5"],
+                    "gridArea": ["5", "2", "6", "3"],
                     "class": "purple",
                     "type": "action",
                     "executables": [{"type": "layer", "args":[1,5]}]

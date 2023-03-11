@@ -186,14 +186,6 @@
                 {
                     "name": "2",
                     "path": "stationLevels.station2"
-                },
-                {
-                    "name": "3",
-                    "path": "stationLevels.station3"
-                },
-                {
-                    "name": "Engaged",
-                    "path": "stationLevels.station4"
                 }
             ]
         }
